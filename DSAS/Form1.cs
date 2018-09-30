@@ -233,7 +233,7 @@ namespace DSAS
             }
             catch(HttpRequestException ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.Message);
             }
         }
     }
