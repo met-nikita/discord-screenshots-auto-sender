@@ -126,7 +126,7 @@
     <value>146, 12</value>
   </data>
   <data name="tb_webhookurl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 20</value>
+    <value>232, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tb_webhookurl.TabIndex" type="System.Int32, mscorlib">
@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_webhookurl.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="tb_scrfolder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -151,7 +151,7 @@
     <value>146, 39</value>
   </data>
   <data name="tb_scrfolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 20</value>
+    <value>232, 20</value>
   </data>
   <data name="tb_scrfolder.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -166,7 +166,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tb_scrfolder.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="l_webhookurl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -193,7 +193,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;l_webhookurl.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="l_scrfolder.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -220,13 +220,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;l_scrfolder.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="b_browse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="b_browse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 38</value>
+    <value>384, 37</value>
   </data>
   <data name="b_browse.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 22</value>
@@ -247,7 +247,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;b_browse.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="b_startstop.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left, Right</value>
@@ -256,7 +256,7 @@
     <value>15, 66</value>
   </data>
   <data name="b_startstop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>408, 23</value>
+    <value>492, 23</value>
   </data>
   <data name="b_startstop.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -274,7 +274,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;b_startstop.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -289,19 +289,19 @@
     <value>299, 17</value>
   </metadata>
   <data name="trayMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>103, 22</value>
   </data>
   <data name="trayMenuItem1.Text" xml:space="preserve">
     <value>Start</value>
   </data>
   <data name="trayMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>103, 22</value>
   </data>
   <data name="trayMenuItem2.Text" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="trayMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 70</value>
+    <value>104, 48</value>
   </data>
   <data name="&gt;&gt;trayMenuStrip.Name" xml:space="preserve">
     <value>trayMenuStrip</value>
@@ -603,7 +603,7 @@
     <value>Right</value>
   </data>
   <data name="b_test.Location" type="System.Drawing.Point, System.Drawing">
-    <value>348, 10</value>
+    <value>384, 10</value>
   </data>
   <data name="b_test.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 22</value>
@@ -624,6 +624,60 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;b_test.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="l_filter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="l_filter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="l_filter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 15</value>
+  </data>
+  <data name="l_filter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 13</value>
+  </data>
+  <data name="l_filter.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="l_filter.Text" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="&gt;&gt;l_filter.Name" xml:space="preserve">
+    <value>l_filter</value>
+  </data>
+  <data name="&gt;&gt;l_filter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;l_filter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;l_filter.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tb_filter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="tb_filter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>465, 39</value>
+  </data>
+  <data name="tb_filter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 20</value>
+  </data>
+  <data name="tb_filter.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tb_filter.Name" xml:space="preserve">
+    <value>tb_filter</value>
+  </data>
+  <data name="&gt;&gt;tb_filter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tb_filter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tb_filter.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -633,7 +687,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>436, 99</value>
+    <value>520, 99</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -922,8 +976,11 @@
         ///4AAB///////wAAP///////wAD////////wA////////////8=
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1000, 138</value>
+    <value>1500, 138</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>452, 138</value>

@@ -130,10 +130,7 @@
   <data name="b_startstop.Text" xml:space="preserve">
     <value>Старт</value>
   </data>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 48</value>
-  </data>
-  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="trayIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAQEAAAAEAIAAoQgAAFgAAACgAAABAAAAAgAAAAAEAIAAAAAAAAEAAABMLAAATCwAAAAAAAAAA
         AAD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP//
@@ -420,23 +417,14 @@
         ///4AAB///////wAAP///////wAD////////wA////////////8=
 </value>
   </data>
-  <data name="notifyIcon1.Text" xml:space="preserve">
-    <value>АОС</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Старт</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 22</value>
-  </data>
-  <data name="toolStripMenuItem2.Text" xml:space="preserve">
-    <value>Закрыть</value>
-  </data>
   <data name="b_test.Text" xml:space="preserve">
     <value>Отпр. тест</value>
+  </data>
+  <data name="l_filter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="l_filter.Text" xml:space="preserve">
+    <value>Фильтр:</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -724,6 +712,10 @@
         AAH/////AAAAA/////8AAAAD/////4AAAAf/////gAAAB//////AAAAP/////+AAAB//////8AAAH///
         ///4AAB///////wAAP///////wAD////////wA////////////8=
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Inherit</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Авто-отправщик скриншотов</value>

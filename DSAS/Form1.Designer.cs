@@ -42,6 +42,8 @@
             this.trayMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.trayMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.b_test = new System.Windows.Forms.Button();
+            this.l_filter = new System.Windows.Forms.Label();
+            this.tb_filter = new System.Windows.Forms.TextBox();
             this.trayMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,10 +120,22 @@
             this.b_test.UseVisualStyleBackColor = true;
             this.b_test.Click += new System.EventHandler(this.b_test_Click);
             // 
+            // l_filter
+            // 
+            resources.ApplyResources(this.l_filter, "l_filter");
+            this.l_filter.Name = "l_filter";
+            // 
+            // tb_filter
+            // 
+            resources.ApplyResources(this.tb_filter, "tb_filter");
+            this.tb_filter.Name = "tb_filter";
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tb_filter);
+            this.Controls.Add(this.l_filter);
             this.Controls.Add(this.b_test);
             this.Controls.Add(this.b_startstop);
             this.Controls.Add(this.b_browse);
@@ -154,6 +168,8 @@
         private System.Windows.Forms.ToolStripMenuItem trayMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem trayMenuItem2;
         private System.Windows.Forms.Button b_test;
+        private System.Windows.Forms.Label l_filter;
+        private System.Windows.Forms.TextBox tb_filter;
     }
 }
 

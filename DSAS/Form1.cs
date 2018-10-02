@@ -22,15 +22,19 @@ namespace DSAS
         string lastFile = ""; //Created event can be called twice in a row, need to remember last file to prevent that
         string lastFolder = "";
         string lastUrl = "";
+        string filter = "*.jpg";
         public MainWindow()
         {
             if(config.AppSettings.Settings["lastFolder"] != null)
                 lastFolder = ConfigurationManager.AppSettings["lastFolder"];
             if (config.AppSettings.Settings["lastUrl"] != null)
                 lastUrl = ConfigurationManager.AppSettings["lastUrl"];
+            if (config.AppSettings.Settings["filter"] != null)
+                filter = ConfigurationManager.AppSettings["filter"];
             InitializeComponent();
             tb_scrfolder.Text = lastFolder;
             tb_webhookurl.Text = lastUrl;
+            tb_filter.Text = filter;
         }
 
         private void b_browse_Click(object sender, EventArgs e)
@@ -67,10 +71,11 @@ namespace DSAS
                 watcher = new FileSystemWatcher();
                 watcher.Path = tb_scrfolder.Text;
                 watcher.Created += OnDetectNewFile;
-                watcher.Filter = "*.jpg";
+                watcher.Filter = tb_filter.Text;
                 watcher.EnableRaisingEvents = true;
                 tb_scrfolder.ReadOnly = true;
                 tb_webhookurl.ReadOnly = true;
+                tb_filter.ReadOnly = true;
                 b_browse.Enabled = false;
                 b_test.Enabled = false;
                 b_startstop.Text = strings.str_stop;
@@ -83,6 +88,7 @@ namespace DSAS
                 watcher.Dispose();
                 tb_scrfolder.ReadOnly = false;
                 tb_webhookurl.ReadOnly = false;
+                tb_filter.ReadOnly = false;
                 b_browse.Enabled = true;
                 b_test.Enabled = true;
                 b_startstop.Text = strings.str_start;
@@ -179,6 +185,8 @@ namespace DSAS
             config.AppSettings.Settings.Add("lastFolder", tb_scrfolder.Text);
             config.AppSettings.Settings.Remove("lastUrl");
             config.AppSettings.Settings.Add("lastUrl", tb_webhookurl.Text);
+            config.AppSettings.Settings.Remove("filter");
+            config.AppSettings.Settings.Add("filter", tb_filter.Text);
             config.Save(ConfigurationSaveMode.Modified);
         }
 
