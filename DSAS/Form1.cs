@@ -103,7 +103,7 @@ namespace DSAS
                 return;
             }
             MultipartFormDataContent form = new MultipartFormDataContent();
-            form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "file", "scr.jpg");
+            form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "file", Path.GetFileName(file));
             try
             {
                 await httpClient.PostAsync(tb_webhookurl.Text, form);
