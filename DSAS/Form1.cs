@@ -23,6 +23,7 @@ namespace DSAS
         string lastFolder = "";
         string lastUrl = "";
         string filter = "*.jpg";
+        string msgText = "";
         public MainWindow()
         {
             if(config.AppSettings.Settings["lastFolder"] != null)
@@ -31,10 +32,13 @@ namespace DSAS
                 lastUrl = ConfigurationManager.AppSettings["lastUrl"];
             if (config.AppSettings.Settings["filter"] != null)
                 filter = ConfigurationManager.AppSettings["filter"];
+            if (config.AppSettings.Settings["msgText"] != null)
+                msgText = ConfigurationManager.AppSettings["msgText"];
             InitializeComponent();
             tb_scrfolder.Text = lastFolder;
             tb_webhookurl.Text = lastUrl;
             tb_filter.Text = filter;
+            tb_msgtext.Text = msgText;
         }
 
         private void b_browse_Click(object sender, EventArgs e)
@@ -108,8 +112,9 @@ namespace DSAS
                 SendFile(file);
                 return;
             }
-            MultipartFormDataContent form = new MultipartFormDataContent();
-            form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "file", Path.GetFileName(file));
+            MultipartFormDataContent form = new MultipartFormDataContent();  
+            form.Add(new StringContent("{\"content\": \""+tb_msgtext.Text+"\",\"attachments\": [{\"id\": 0,\"description\": \"screenshot\",\"filename\": \"scr.jpg\"}]}"), "payload_json");
+            form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "files[0]", Path.GetFileName(file));
             try
             {
                 await httpClient.PostAsync(tb_webhookurl.Text, form);
@@ -187,6 +192,8 @@ namespace DSAS
             config.AppSettings.Settings.Add("lastUrl", tb_webhookurl.Text);
             config.AppSettings.Settings.Remove("filter");
             config.AppSettings.Settings.Add("filter", tb_filter.Text);
+            config.AppSettings.Settings.Remove("msgText");
+            config.AppSettings.Settings.Add("msgText", tb_msgtext.Text);
             config.Save(ConfigurationSaveMode.Modified);
         }
 
@@ -234,7 +241,8 @@ namespace DSAS
             }
             byte[] file_bytes = ImageToByteArray(testpic.testpic1);
             MultipartFormDataContent form = new MultipartFormDataContent();
-            form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "file", "scr.jpg");
+            form.Add(new StringContent("{\"content\": \"Hello, World!\",\"attachments\": [{\"id\": 0,\"description\": \"screenshot\",\"filename\": \"scr.jpg\"}]}"), "payload_json");
+            form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "files[0]", "scr.jpg");
             try
             {
                 httpClient.PostAsync(tb_webhookurl.Text, form);

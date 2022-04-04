@@ -44,6 +44,8 @@
             this.b_test = new System.Windows.Forms.Button();
             this.l_filter = new System.Windows.Forms.Label();
             this.tb_filter = new System.Windows.Forms.TextBox();
+            this.tb_msgtext = new System.Windows.Forms.TextBox();
+            this.l_msgtext = new System.Windows.Forms.Label();
             this.trayMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,28 +91,28 @@
             // 
             // trayIcon
             // 
-            this.trayIcon.ContextMenuStrip = this.trayMenuStrip;
             resources.ApplyResources(this.trayIcon, "trayIcon");
+            this.trayIcon.ContextMenuStrip = this.trayMenuStrip;
             this.trayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
             // trayMenuStrip
             // 
+            resources.ApplyResources(this.trayMenuStrip, "trayMenuStrip");
             this.trayMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trayMenuItem1,
             this.trayMenuItem2});
             this.trayMenuStrip.Name = "contextMenuStrip1";
-            resources.ApplyResources(this.trayMenuStrip, "trayMenuStrip");
             // 
             // trayMenuItem1
             // 
-            this.trayMenuItem1.Name = "trayMenuItem1";
             resources.ApplyResources(this.trayMenuItem1, "trayMenuItem1");
+            this.trayMenuItem1.Name = "trayMenuItem1";
             this.trayMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // trayMenuItem2
             // 
-            this.trayMenuItem2.Name = "trayMenuItem2";
             resources.ApplyResources(this.trayMenuItem2, "trayMenuItem2");
+            this.trayMenuItem2.Name = "trayMenuItem2";
             this.trayMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // b_test
@@ -130,6 +132,16 @@
             resources.ApplyResources(this.tb_filter, "tb_filter");
             this.tb_filter.Name = "tb_filter";
             // 
+            // tb_msgtext
+            // 
+            resources.ApplyResources(this.tb_msgtext, "tb_msgtext");
+            this.tb_msgtext.Name = "tb_msgtext";
+            // 
+            // l_msgtext
+            // 
+            resources.ApplyResources(this.l_msgtext, "l_msgtext");
+            this.l_msgtext.Name = "l_msgtext";
+            // 
             // MainWindow
             // 
             resources.ApplyResources(this, "$this");
@@ -139,8 +151,10 @@
             this.Controls.Add(this.b_test);
             this.Controls.Add(this.b_startstop);
             this.Controls.Add(this.b_browse);
+            this.Controls.Add(this.l_msgtext);
             this.Controls.Add(this.l_scrfolder);
             this.Controls.Add(this.l_webhookurl);
+            this.Controls.Add(this.tb_msgtext);
             this.Controls.Add(this.tb_scrfolder);
             this.Controls.Add(this.tb_webhookurl);
             this.KeyPreview = true;
@@ -170,6 +184,8 @@
         private System.Windows.Forms.Button b_test;
         private System.Windows.Forms.Label l_filter;
         private System.Windows.Forms.TextBox tb_filter;
+        private System.Windows.Forms.TextBox tb_msgtext;
+        private System.Windows.Forms.Label l_msgtext;
     }
 }
 
