@@ -113,7 +113,7 @@ namespace DSAS
                 return;
             }
             MultipartFormDataContent form = new MultipartFormDataContent();  
-            form.Add(new StringContent("{\"content\": \""+tb_msgtext.Text+"\",\"attachments\": [{\"id\": 0,\"description\": \"screenshot\",\"filename\": \"scr.jpg\"}]}"), "payload_json");
+            form.Add(new StringContent("{\"content\": \""+tb_msgtext.Text+"\",\"attachments\": [{\"id\": 0,\"description\": \"screenshot\",\"filename\": \""+Path.GetFileName(file)+"\"}]}"), "payload_json");
             form.Add(new ByteArrayContent(file_bytes, 0, file_bytes.Length), "files[0]", Path.GetFileName(file));
             try
             {
